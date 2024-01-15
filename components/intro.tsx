@@ -1,0 +1,104 @@
+import Link from "next/link";
+import { Avatar } from "@/components/avatar";
+import { Icons } from "@/components/icons";
+
+const SOCIALS = [
+  {
+    href: "https://github.com/nathanlevitt",
+    icon: <Icons.github className="w-6 h-6" />,
+  },
+  {
+    href: "https://twitter.com/nathanlevitt",
+    icon: <Icons.twitter className="w-6 h-6" />,
+  },
+  {
+    href: "https://linkedin.com/in/nathanlevitt",
+    icon: <Icons.linkedIn className="w-6 h-6" />,
+  },
+];
+
+function Badge(props: React.ComponentPropsWithoutRef<"a">) {
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+    />
+  );
+}
+
+function SocialLink(props: React.ComponentPropsWithoutRef<"a">) {
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 rounded-full p-2 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+    />
+  );
+}
+
+export function Intro() {
+  return (
+    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-6 space-y-6">
+      <Avatar />
+
+      <h1 className="text-5xl tracking-tight font-black text-center md:text-left">
+        Senior Frontend Developer
+      </h1>
+
+      <p className="prose prose-neutral dark:prose-invert text-center md:text-left">
+        {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently `}
+        <Link href="/work">work</Link>
+        {` as the Lead Frontend Developer at `}
+        <span className="not-prose">
+          <Badge href="https://lmmv.com">
+            <svg
+              width="13"
+              height="11"
+              role="img"
+              aria-label="Like Minded Labs logo"
+              className="inline-flex mr-1"
+            >
+              <use href="/sprite.svg#vercel" />
+            </svg>
+            Like Minded Labs
+          </Badge>
+        </span>
+        {`, where I help build `}
+        <Badge href="https://nextjs.org">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          {/* <img
+            alt="Next.js logomark"
+            src="/next-logo.svg"
+            className="!mr-1"
+            width="14"
+            height="14"
+          /> */}
+          TODA Live
+        </Badge>
+        {`, a teleconferencing and media production software built with `}
+        <Badge href="https://react.dev">
+          <svg
+            width="14"
+            height="14"
+            role="img"
+            aria-label="React logo"
+            className="!mr-1"
+          >
+            <use href="/sprite.svg#react" />
+          </svg>
+          React
+        </Badge>
+        .
+      </p>
+
+      <div className="flex gap-4">
+        {SOCIALS.map(({ href, icon }) => (
+          <SocialLink key={href} href={href}>
+            {icon}
+          </SocialLink>
+        ))}
+      </div>
+    </div>
+  );
+}
