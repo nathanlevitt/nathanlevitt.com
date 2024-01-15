@@ -50,30 +50,29 @@ export function Intro() {
         {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently `}
         <Link href="/work">work</Link>
         {` as the Lead Frontend Developer at `}
-        <span className="not-prose">
-          <Badge href="https://lmmv.com">
-            <svg
-              width="13"
-              height="11"
-              role="img"
-              aria-label="Like Minded Labs logo"
-              className="inline-flex mr-1"
-            >
-              <use href="/sprite.svg#vercel" />
-            </svg>
-            Like Minded Labs
-          </Badge>
-        </span>
+        <Badge href="https://lmmv.com">
+          <svg
+            width="13"
+            height="13"
+            role="img"
+            aria-label="Like Minded Labs logo"
+            className="inline-flex mr-1"
+          >
+            <use href="/sprite.svg#lml" />
+          </svg>
+          Like Minded Labs
+        </Badge>
         {`, where I help build `}
-        <Badge href="https://nextjs.org">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          {/* <img
-            alt="Next.js logomark"
-            src="/next-logo.svg"
-            className="!mr-1"
-            width="14"
-            height="14"
-          /> */}
+        <Badge href="https://lmmv.com/toda-live">
+          <svg
+            width="20"
+            height="13"
+            role="img"
+            aria-label="TODA Live logo"
+            className="inline-flex mr-1"
+          >
+            <use href="/sprite.svg#toda" />
+          </svg>
           TODA Live
         </Badge>
         {`, a teleconferencing and media production software built with `}

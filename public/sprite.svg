@@ -224,5 +224,31 @@
         style="fill:#fff;fill-rule:evenodd"
       />
     </symbol>
+    <symbol
+      id="lml"
+      width="13"
+      height="13"
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13,0v6.5l-3.25,3.25V3.25l-3.25,3.25-3.25-3.25v6.5h6.5l-3.25,3.25H0V0h4.6l1.9,1.9,1.9-1.9h4.6Z"
+        fill="#0075FF"
+      />
+    </symbol>
+    <symbol
+      id="toda"
+      width="20"
+      height="13"
+      viewBox="0 0 26 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.83,0H0v4.33h10.83v8.67h4.33V4.33C15.17,1.94,13.23,0,10.83,0ZM15.17,0h10.83v4.33h-10.83V0Z"
+        fill="#6600CC"
+      />
+    </symbol>
   </defs>
 </svg>
