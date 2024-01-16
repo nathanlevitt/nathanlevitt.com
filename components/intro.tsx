@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Avatar } from "@/components/avatar";
 import { Icons } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 const SOCIALS = [
   {
@@ -37,9 +38,24 @@ function SocialLink(props: React.ComponentPropsWithoutRef<"a">) {
   );
 }
 
+function CTAButton({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"a">) {
+  return (
+    <a
+      {...props}
+      className={cn(
+        "flex items-center justify-center font-medium text-white dark:text-neutral-900 bg-neutral-900 dark:white w-full py-4 rounded-full border",
+        className
+      )}
+    />
+  );
+}
+
 export function Intro() {
   return (
-    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-6 space-y-6">
+    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-4 space-y-6">
       <Avatar />
 
       <h1 className="text-5xl tracking-tight font-black text-center md:text-left">
@@ -98,6 +114,8 @@ export function Intro() {
           </SocialLink>
         ))}
       </div>
+
+      <CTAButton href="mailto:nathan@trudine.com">Get in touch</CTAButton>
     </div>
   );
 }
