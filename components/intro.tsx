@@ -32,7 +32,7 @@ function SocialLink(props: React.ComponentPropsWithoutRef<"a">) {
     <a
       {...props}
       target="_blank"
-      className="border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 rounded-full p-2 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+      className="border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-900 dark:hover:bg-white rounded-full p-2 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 hover:text-neutral-100 dark:hover:text-neutral-900 no-underline transition-all duration-300"
     />
   );
 }
