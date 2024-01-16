@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/react";
 import { PreloadResources } from "@/app/preload";
 import { cn } from "@/lib/utils";
 
@@ -54,7 +55,7 @@ export default function RootLayout({
         <main className="">
           {/* <Navbar /> */}
           {children}
-          {/* <Analytics /> */}
+          <Analytics />
           <PreloadResources />
         </main>
       </body>
