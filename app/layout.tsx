@@ -1,6 +1,8 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import "./globals.css";
+import { PreloadResources } from "@/app/preload";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -53,6 +55,7 @@ export default function RootLayout({
           {/* <Navbar /> */}
           {children}
           {/* <Analytics /> */}
+          <PreloadResources />
         </main>
       </body>
     </html>
