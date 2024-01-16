@@ -46,7 +46,7 @@ function CTAButton({
     <a
       {...props}
       className={cn(
-        "flex items-center justify-center font-medium text-white dark:text-neutral-900 bg-neutral-900 dark:white w-full py-4 rounded-full border",
+        "flex items-center justify-center font-medium text-white dark:text-neutral-100 bg-neutral-900 dark:bg-neutral-800 w-full py-4 rounded-full",
         className
       )}
     />
@@ -55,7 +55,7 @@ function CTAButton({
 
 export function Intro() {
   return (
-    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-4 space-y-6">
+    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-6 space-y-6">
       <Avatar />
 
       <h1 className="text-5xl tracking-tight font-black text-center md:text-left">
