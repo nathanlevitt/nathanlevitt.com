@@ -1,3 +1,4 @@
+import { Work } from "@/components/work";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +25,7 @@ function SocialLink(props: React.ComponentPropsWithoutRef<"a">) {
 
 function Intro() {
   return (
-    <div>
+    <div className="">
       <div className="flex items-center mb-8 space-x-4">
         <div className="relative w-24 h-24 ml-4 overflow-hidden transition-transform duration-300 rounded-full bg-neutral-50 hover:scale-105">
           <Image
@@ -103,8 +104,9 @@ function Intro() {
 
 export default function Page() {
   return (
-    <div className="max-w-xl px-4 mx-auto pt-28">
+    <div className="max-w-xl px-4 mx-auto space-y-10 py-28">
       <Intro />
+      <Work />
     </div>
   );
 }

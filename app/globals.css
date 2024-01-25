@@ -30,7 +30,7 @@
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+  @apply overflow-x-auto border rounded-lg bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-900;
 }
 
 .prose code {
@@ -64,8 +64,11 @@ h4 {
 
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
+  /* margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important; */
+
+  margin-top: 0 !important;
+  margin-bottom: 0em !important;
 }
 
 pre::-webkit-scrollbar {

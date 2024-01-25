@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { PreloadResources } from "@/app/preload";
 import { cn } from "@/lib/utils";
+import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanlevitt.com"),
@@ -44,14 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        "text-black bg-neutral-50 dark:text-white dark:bg-[#111010]",
-        GeistSans.variable
-      )}
-    >
-      <body className="antialiased">
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="antialiased text-neutral-900 bg-white dark:text-neutral-100 dark:bg-[#111010]">
         <main className="">
           {/* <Navbar /> */}
           {children}
