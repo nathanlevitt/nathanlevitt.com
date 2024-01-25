@@ -23,7 +23,7 @@ function Badge(props: React.ComponentPropsWithoutRef<"a">) {
     <a
       {...props}
       target="_blank"
-      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+      className="inline-flex items-center p-1 text-sm leading-4 no-underline border rounded border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
     />
   );
 }
@@ -33,7 +33,7 @@ function SocialLink(props: React.ComponentPropsWithoutRef<"a">) {
     <a
       {...props}
       target="_blank"
-      className="border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-900 dark:hover:bg-white rounded-full p-2 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 hover:text-neutral-100 dark:hover:text-neutral-900 no-underline transition-all duration-300"
+      className="inline-flex items-center p-2 text-sm leading-4 no-underline transition-all duration-300 bg-white border rounded-full border-neutral-200 dark:border-neutral-700 dark:bg-neutral-900 hover:bg-neutral-900 dark:hover:bg-white text-neutral-900 dark:text-neutral-100 hover:text-neutral-100 dark:hover:text-neutral-900"
     />
   );
 }
@@ -46,7 +46,7 @@ function CTAButton({
     <a
       {...props}
       className={cn(
-        "flex items-center justify-center font-medium text-white dark:text-neutral-100 bg-neutral-900 dark:bg-neutral-800 w-full py-4 rounded-full",
+        "flex items-center justify-center font-medium text-white dark:text-neutral-100 bg-neutral-900 dark:bg-neutral-800 max-w-full min-w-56 py-3.5 rounded-full",
         className
       )}
     />
@@ -55,14 +55,14 @@ function CTAButton({
 
 export function Intro() {
   return (
-    <div className="flex flex-col items-center md:items-start bg-white dark:bg-neutral-900 rounded-lg p-6 space-y-6">
+    <div className="flex flex-col items-center p-6 mx-auto space-y-6 bg-white rounded-lg dark:bg-neutral-900 ring-1 ring-neutral-400/10">
       <Avatar />
 
-      <h1 className="text-5xl tracking-tight font-black text-center md:text-left">
+      <h1 className="text-5xl font-black tracking-tight text-center">
         Senior Frontend Developer
       </h1>
 
-      <p className="prose prose-neutral dark:prose-invert text-center md:text-left">
+      <p className="prose text-center prose-neutral dark:prose-invert">
         {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently `}
         <Link href="/work">work</Link>
         {` as the Lead Frontend Developer at `}
