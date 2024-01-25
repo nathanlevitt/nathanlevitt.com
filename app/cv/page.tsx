@@ -27,7 +27,7 @@ function Intro() {
   return (
     <div className="">
       <div className="flex items-center mb-8 space-x-4">
-        <div className="relative w-24 h-24 ml-4 overflow-hidden transition-transform duration-300 rounded-full bg-neutral-50 hover:scale-105">
+        <div className="relative w-20 h-20 overflow-hidden transition-transform duration-300 rounded-full md:w-24 md:h-24 bg-neutral-50 hover:scale-105">
           <Image
             src="/avatar.jpg"
             width={144}
@@ -48,54 +48,14 @@ function Intro() {
 
       <div>
         <h3>About</h3>
-        {/* <p>
-          GM, I'm Nathan. I enjoy building things that live on the internet. I
-          develop exceptional websites and web apps that provide intuitive,
-          pixel-perfect user interfaces with efficient and modern backends.
-        </p> */}
-        <p className="prose prose-neutral dark:prose-invert">
-          {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently `}
-          <Link href="/work">work</Link>
-          {` as the Lead Frontend Developer at `}
-          <Badge href="https://lmmv.com">
-            <svg
-              width="13"
-              height="13"
-              role="img"
-              aria-label="Like Minded Labs logo"
-              className="inline-flex mr-1"
-            >
-              <use href="/sprite.svg#lml" />
-            </svg>
-            Like Minded Labs
-          </Badge>
+        <p className="text-sm leading-6 prose prose-neutral dark:prose-invert">
+          {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently work`}
+          {`as the Lead Frontend Developer at `}
+          <Link href="https://lmmv.com/lml">Like Minded Labs</Link>
           {`, where I help build `}
-          <Badge href="https://lmmv.com/toda-live">
-            <svg
-              width="20"
-              height="13"
-              role="img"
-              aria-label="TODA Live logo"
-              className="inline-flex mr-1"
-            >
-              <use href="/sprite.svg#toda" />
-            </svg>
-            TODA Live
-          </Badge>
+          <Link href="https://lmmv.com/toda-live">TODA Live</Link>
           {`, a teleconferencing and media production software built with `}
-          <Badge href="https://react.dev">
-            <svg
-              width="14"
-              height="14"
-              role="img"
-              aria-label="React logo"
-              className="!mr-1"
-            >
-              <use href="/sprite.svg#react" />
-            </svg>
-            React
-          </Badge>
-          .
+          <Link href="https://react.dev">React</Link>.
         </p>
       </div>
     </div>
@@ -104,7 +64,7 @@ function Intro() {
 
 export default function Page() {
   return (
-    <div className="max-w-xl px-4 mx-auto space-y-10 py-28">
+    <div className="max-w-xl px-4 py-24 mx-auto space-y-10 md:py-28">
       <Intro />
       <Work />
     </div>

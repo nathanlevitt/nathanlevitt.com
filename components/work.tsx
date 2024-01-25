@@ -57,7 +57,7 @@ export function Work() {
             <p className="text-sm prose prose-neutral dark:prose-invert">
               {job.startDate} – {job.endDate}
             </p>
-            <div className="space-y-2 text-sm prose sm:col-span-3 prose-neutral dark:prose-invert">
+            <div className="space-y-1 text-sm prose sm:col-span-3 prose-neutral dark:prose-invert">
               {job.href ? (
                 <>
                   <Link href={job.href} target="_blank">
@@ -70,7 +70,7 @@ export function Work() {
                   {job.title} – {job.company}
                 </a>
               )}
-              <p className="text-xs prose prose-neutral dark:prose-invert">
+              <p className="text-xs leading-6 prose prose-neutral dark:prose-invert">
                 {job.location}
               </p>
               <p>{job.description}</p>
