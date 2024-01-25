@@ -64,7 +64,7 @@ function Intro() {
 
 export default function Page() {
   return (
-    <div className="max-w-xl px-4 py-24 mx-auto space-y-10 md:py-28">
+    <div className="max-w-xl px-4 py-10 mx-auto space-y-10 md:py-28">
       <Intro />
       <Work />
     </div>

@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { PreloadResources } from "@/app/preload";
 import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanlevitt.com"),
@@ -48,7 +49,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="antialiased text-neutral-900 bg-white dark:text-neutral-100 dark:bg-[#111010]">
         <main className="">
-          {/* <Navbar /> */}
+          <Navbar />
           {children}
           <Analytics />
           <PreloadResources />
