@@ -41,7 +41,7 @@ function Intro() {
           <h1 className="text-xl">Nathan Levitt</h1>
           <p className="text-sm">Senior Frontend Developer</p>
           <p className="text-sm prose prose-neutral dark:prose-invert">
-            <Link href="https://levitt.vercel.app">levitt.vercel.app</Link>
+            <Link href="mailto:nathan@trudine.com">nathan@trudine.com</Link>
           </p>
         </div>
       </div>

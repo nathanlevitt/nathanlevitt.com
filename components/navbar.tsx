@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DigitalClock } from "@/components/clock";
 
 export function Navbar() {
   return (
@@ -12,6 +13,8 @@ export function Navbar() {
             alt="Nathan Levitt"
             className="border rounded-2xl border-neutral-200 dark:border-neutral-700"
           />
+
+          <DigitalClock />
         </div>
       </div>
     </div>
