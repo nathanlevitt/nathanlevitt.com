@@ -1,9 +1,13 @@
 import { Intro } from "@/components/intro";
+import { Links } from "@/components/links";
+import { Work } from "@/components/work";
 
 export default function Page() {
   return (
-    <section className="flex flex-col space-y-2.5 md:space-y-4 p-2.5 md:p-4">
+    <div className="max-w-xl px-4 py-24 mx-auto space-y-10 md:py-28">
       <Intro />
-    </section>
+      <Work />
+      <Links />
+    </div>
   );
 }
