@@ -49,8 +49,7 @@ function Intro() {
       <div>
         <h3>About</h3>
         <p className="text-sm leading-6 prose prose-neutral dark:prose-invert">
-          {`Currently living & working in Los Angeles. I'm a frontend developer, optimist, and community builder. I currently work`}
-          {`as the Lead Frontend Developer at `}
+          {`Currently living & working in Los Angeles. I'm a frontend developer passionate about creating intuitive user experiences and innovating solutions in a dynamic, fast-paced environment. I currently work as the Lead Frontend Developer at `}
           <Link href="https://lmmv.com/lml">Like Minded Labs</Link>
           {`, where I help build `}
           <Link href="https://lmmv.com/toda-live">TODA Live</Link>
