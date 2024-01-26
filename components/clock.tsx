@@ -39,7 +39,7 @@ export function DigitalClock() {
 
     return schedule.find((slot) => {
       return hour >= slot.start && hour < slot.end;
-    })!;
+    });
   }, [time]);
 
   // Format the time in HH:mm format
@@ -80,17 +80,17 @@ export function DigitalClock() {
                 <div
                   className={cn(
                     "absolute w-2 h-2 rounded-full",
-                    event.status === "on" && "bg-green-500",
-                    event.status === "off" && "bg-red-500",
-                    event.status === "idle" && "bg-yellow-500"
+                    event?.status === "on" && "bg-green-500",
+                    event?.status === "off" && "bg-red-500",
+                    event?.status === "idle" && "bg-yellow-500"
                   )}
                 />
                 <div
                   className={cn(
                     "absolute w-2 h-2 bg-green-500 rounded-full animate-ping",
-                    event.status === "on" && "bg-green-500",
-                    event.status === "off" && "bg-red-500",
-                    event.status === "idle" && "bg-yellow-500"
+                    event?.status === "on" && "bg-green-500",
+                    event?.status === "off" && "bg-red-500",
+                    event?.status === "idle" && "bg-yellow-500"
                   )}
                 />
               </div>
