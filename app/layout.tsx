@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { PreloadResources } from "@/app/preload";
-import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
 import { Navbar } from "@/components/navbar";
 

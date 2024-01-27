@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { DigitalClock } from "@/components/clock";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navbar() {
   return (
@@ -14,7 +15,10 @@ export function Navbar() {
             className="border rounded-2xl border-neutral-200 dark:border-neutral-700"
           />
 
-          <DigitalClock />
+          <div className="flex items-center space-x-2">
+            <DigitalClock />
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </div>
