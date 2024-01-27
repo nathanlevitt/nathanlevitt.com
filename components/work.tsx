@@ -28,7 +28,7 @@ const jobs = [
     title: "Founder",
     company: "TruDine",
     location: "Los Angeles, CA",
-    startDate: "2019",
+    startDate: "2020",
     endDate: "Present",
     description:
       "Founded and evolved an interactive restaurant menu platform, transforming local restaurant marketing by offering immersive digital experiences with detailed dish visuals, ingredient insights, customer reviews, custom domains, themes, an admin portal, and detailed customer analytics. This platform successfully connected thousands of new customers with local eateries. Adapted the business model to create a unique social platform, utilizing menu data to enable users to upload food pictures, write reviews, and discover new dishes nearby. Led a team of six in engineering, marketing, data collection, restaurant outreach, and pitch material creation.",
@@ -52,8 +52,7 @@ const jobs = [
     startDate: "2017",
     endDate: "2021",
     description:
-      "Developed internal and public-facing merchandise websites for California Pizza Kitchen, Stanford Health Care, ElectraMeccanica, University of California (UCOP). Worked with UCLA Health to design, develop, and deploy holiday popup stores for over 10,000 employees. Managed an external development team to rebuild main promotional products ecommerce website, along with industry suppliers for database integration.",
-    //  React, Next.js, Symfony, Node.js, TypeScript
+      "Developed internal and public-facing merchandise websites for California Pizza Kitchen, UCLA Health, ElectraMeccanica, University of California (UCOP). Worked with Stanford Children's Health to design, develop, and deploy holiday popup stores for over 10,000 employees. Managed an external development team to rebuild main promotional products ecommerce website, along with industry suppliers for database integration.",
     skills: ["React", "Next.js", "Symfony", "Node.js", "TypeScript"],
   },
 ] satisfies Job[];
