@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark";
 
 export function useTheme() {
-  const isNight = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const isNight =
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useState<Theme>(
     typeof window !== "undefined"
       ? (window.localStorage.getItem("theme") as Theme) ??
