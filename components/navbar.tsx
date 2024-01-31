@@ -8,7 +8,7 @@ export function Navbar() {
       <div className="max-w-xl px-4 py-4 mx-auto">
         <div className="flex items-center justify-between flex-1">
           <Image
-            src={"/logo.png"}
+            src={"/nate.svg"}
             width={45}
             height={45}
             alt="Nathan Levitt"
