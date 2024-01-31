@@ -12,6 +12,7 @@ export function Intro() {
             height={144}
             alt="Nathan Levitt"
             className="object-cover"
+            priority={true}
           />
         </div>
 

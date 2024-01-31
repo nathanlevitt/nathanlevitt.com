@@ -13,6 +13,7 @@ export function Navbar() {
             height={45}
             alt="Nathan Levitt"
             className="border rounded-2xl border-neutral-200 dark:border-neutral-700"
+            priority={true}
           />
 
           <div className="flex items-center space-x-2">
