@@ -10,6 +10,7 @@ export function ThemeToggle() {
     <button
       className="flex items-center p-1.5 bg-white border rounded-full select-none dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      aria-label="Toggle theme"
     >
       {theme === "light" ? (
         <Icons.sun className="w-4 h-4 text-yellow-500" />
