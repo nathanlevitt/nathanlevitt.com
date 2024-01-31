@@ -104,7 +104,10 @@ export function DigitalClock() {
               |
             </p>
             <div className="font-mono">
-              <span className="text-xs font-medium leading-6 prose prose-neutral dark:prose-invert">
+              <span
+                className="text-xs font-medium leading-6 prose prose-neutral dark:prose-invert"
+                suppressHydrationWarning
+              >
                 {hours}:{minutes}:{seconds}
               </span>
             </div>
