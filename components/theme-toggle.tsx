@@ -11,7 +11,8 @@ export function ThemeToggle() {
       className="flex items-center justify-center w-[30px] h-[30px] bg-white border rounded-full select-none dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
       onClick={() => {
         const isDark =
-          window.matchMedia("(prefers-color-scheme: dark)").matches ||
+          (theme === "system" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches) ||
           theme === "dark";
         setTheme(isDark ? "light" : "dark");
       }}
