@@ -9,7 +9,12 @@ export function ThemeToggle() {
   return (
     <button
       className="flex items-center justify-center w-[30px] h-[30px] bg-white border rounded-full select-none dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={() => {
+        const isDark =
+          window.matchMedia("(prefers-color-scheme: dark)").matches ||
+          theme === "dark";
+        setTheme(isDark ? "light" : "dark");
+      }}
       aria-label="Toggle theme"
       suppressHydrationWarning
     >
