@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { PreloadResources } from "@/app/preload";
 import { GeistMono } from "geist/font/mono";
 import { Navbar } from "@/components/navbar";
+import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanlevitt.com"),
@@ -45,13 +46,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="antialiased text-neutral-900 bg-white dark:text-neutral-100 dark:bg-[#111010]">
         <main className="">
-          <Navbar />
-          {children}
-          <Analytics />
-          <PreloadResources />
+          <Providers>
+            <Navbar />
+            {children}
+            <Analytics />
+            <PreloadResources />
+          </Providers>
         </main>
       </body>
     </html>
