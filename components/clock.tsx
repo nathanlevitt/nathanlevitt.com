@@ -1,13 +1,15 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/tooltip";
+import { Skeleton } from "@/components/skeleton";
 import { cn } from "@/lib/utils";
+import { useHydration } from "@/hooks/use-hydration";
 
 const schedule = [
   { title: "🏋️ Working out", status: "idle", start: 5, end: 7 },
@@ -22,6 +24,7 @@ const schedule = [
 ] as const;
 
 export function DigitalClock() {
+  const isHydrated = useHydration();
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -73,50 +76,55 @@ export function DigitalClock() {
   const { hours, minutes, seconds } = formatTime(time);
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger>
-          <div className="flex items-center px-2 space-x-2 bg-white border rounded-full select-none dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
-            <div className="flex items-center space-x-2">
-              <div className="relative w-2 h-2">
-                <div
-                  className={cn(
-                    "absolute w-2 h-2 rounded-full",
-                    event.status === "on" && "bg-green-500",
-                    event.status === "off" && "bg-red-500",
-                    event.status === "idle" && "bg-yellow-500"
-                  )}
-                />
-                <div
-                  className={cn(
-                    "absolute w-2 h-2 bg-green-500 rounded-full animate-ping",
-                    event.status === "on" && "bg-green-500",
-                    event.status === "off" && "bg-red-500",
-                    event.status === "idle" && "bg-yellow-500"
-                  )}
-                />
+    <Suspense
+      key={isHydrated ? "hydrated" : "skeleton"}
+      fallback={<Skeleton className="h-7 w-[150px]" />}
+    >
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger>
+            <div className="flex items-center px-2 space-x-2 bg-white border rounded-full select-none dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+              <div className="flex items-center space-x-2">
+                <div className="relative w-2 h-2">
+                  <div
+                    className={cn(
+                      "absolute w-2 h-2 rounded-full",
+                      event.status === "on" && "bg-green-500",
+                      event.status === "off" && "bg-red-500",
+                      event.status === "idle" && "bg-yellow-500"
+                    )}
+                  />
+                  <div
+                    className={cn(
+                      "absolute w-2 h-2 bg-green-500 rounded-full animate-ping",
+                      event.status === "on" && "bg-green-500",
+                      event.status === "off" && "bg-red-500",
+                      event.status === "idle" && "bg-yellow-500"
+                    )}
+                  />
+                </div>
+                <p className="text-xs font-medium prose prose-neutral dark:prose-invert">
+                  Los Angeles
+                </p>
               </div>
-              <p className="text-xs font-medium prose prose-neutral dark:prose-invert">
-                Los Angeles
+              <p className="text-xs font-medium prose opacity-50 prose-neutral dark:prose-invert">
+                |
               </p>
+              <div className="font-mono">
+                <span
+                  className="text-xs font-medium leading-6 prose prose-neutral dark:prose-invert"
+                  suppressHydrationWarning
+                >
+                  {hours}:{minutes}:{seconds}
+                </span>
+              </div>
             </div>
-            <p className="text-xs font-medium prose opacity-50 prose-neutral dark:prose-invert">
-              |
-            </p>
-            <div className="font-mono">
-              <span
-                className="text-xs font-medium leading-6 prose prose-neutral dark:prose-invert"
-                suppressHydrationWarning
-              >
-                {hours}:{minutes}:{seconds}
-              </span>
-            </div>
-          </div>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p className="text-xs font-medium leading-6">{event.title}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="text-xs font-medium leading-6">{event.title}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </Suspense>
   );
 }
